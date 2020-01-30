@@ -3,7 +3,8 @@ var fs = require('fs');
 var moment = require('moment');
 // console.dir(argv);
 // todos - prompt for filename if none passed
-//   -i arg to input text file with multiple crop points, output a shell file to the dir running the script  
+//   -i arg to input text file with multiple crop points, output a shell file to the dir running the script 
+ 
 //   add arg to actually run the ffmpeg command from this script, maybe console log print the command to run and ask for confirm before running  
 //   can i copy output to clipboard and just paste and run? 
 //   clipboard copy options to try - https://stackoverflow.com/questions/7778539/copy-to-clipboard-in-node-js
