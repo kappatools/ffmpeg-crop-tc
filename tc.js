@@ -1,10 +1,12 @@
 var argv = require('minimist')(process.argv.slice(2));
 var fs = require('fs');
 var moment = require('moment');
+var config = require('./config');
+
 // console.dir(argv);
 // todos - prompt for filename if none passed
 //   -i arg to input text file with multiple crop points, output a shell file to the dir running the script 
- 
+
 //   add arg to actually run the ffmpeg command from this script, maybe console log print the command to run and ask for confirm before running  
 //   can i copy output to clipboard and just paste and run? 
 //   clipboard copy options to try - https://stackoverflow.com/questions/7778539/copy-to-clipboard-in-node-js
@@ -19,11 +21,13 @@ var source_file = source;
 var time_arg = raw_timecode;
 
 
-
+var encode_quality = config.encode_quality;
+var max_rate = config.max_rate;
+//var encode_quality = config.encode_quality;
 //set defaults 
 var edit_mode = mode || 'copy';
-var encode_quality = quality || 4; //default crf 4 unless another value passed 
-var max_rate = max_rate || 105
+//var encode_quality = quality || 4; //default crf 4 unless another value passed 
+//var max_rate = max_rate || 105
 var width = width || 'width';
 var height = height || 'height';
 var top = top || 'top';
